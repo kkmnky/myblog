@@ -5,6 +5,8 @@ import "@/styles/wave.css";
 import { Providers } from "@/components/functional/providers";
 import Header from "@/components/layouts/Header";
 import SectionContainer from "@/components/layouts/SectionContainer";
+import Footer from "@/components/layouts/Footer";
+import siteMetadata from "@/siteMetadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang={siteMetadata.language} suppressHydrationWarning>
       <meta
         name="theme-color"
         media="(prefers-color-scheme: light)"
@@ -41,6 +43,7 @@ export default function RootLayout({
             <div className="flex h-screen flex-col justify-between">
               <Header />
               <main className="mb-auto">{children}</main>
+              <Footer />
             </div>
           </Providers>
         </SectionContainer>

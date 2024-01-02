@@ -1,9 +1,9 @@
 import siteMetadata from "@/siteMetadata";
 import { HEADER_NAV_LINKS } from "@/constants";
-import Link from "../ui-elements/Link";
-import ThemeSwitch from "../ui-parts/ThemeSwitch";
-import MobileNav from "../ui-parts/MobileNav";
-import Image from "../ui-elements/Image";
+import Link from "@/components/ui-elements/Link";
+import ThemeSwitch from "@/components/ui-parts/ThemeSwitch";
+import MobileNav from "@/components/ui-parts/MobileNav";
+import Image from "@/components/ui-elements/Image";
 
 export default function Header() {
   return (
