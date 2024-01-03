@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={
           (inter.className,
-          "bg-gray-200 text-gray-900 antialiased dark:bg-gray-800 dark:text-gray-200")
+          "bg-gray-50 text-gray-600 antialiased dark:bg-gray-800 dark:text-gray-200")
         }
       >
         <SectionContainer>

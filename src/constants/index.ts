@@ -4,3 +4,5 @@ export const HEADER_NAV_LINKS = [
   { href: "/tags", title: "Tags" },
   { href: "/about", title: "About" },
 ];
+
+export const MAX_DISPLAY = 5;
