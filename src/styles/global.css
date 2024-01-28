@@ -31,3 +31,47 @@ input:-webkit-autofill:focus {
 .katex-display {
   overflow: auto hidden;
 }
+
+.toc {
+  @apply py-2 pr-3;
+
+  .toc-list {
+    @apply border-l-2 ml-3 border-none;
+  }
+
+  .toc-link {
+    @apply flex text-sm w-[100%] py-1.5 relative pl-9;
+    &:before {
+      @apply content-[''] w-[10px] h-[10px] border-2 rounded-full top-3 left-4 absolute shadow-[0_0_0_2px_rgb(var(--border))];
+    }
+  }
+
+  .is-active-link {
+    @apply font-bold;
+    &:before {
+      @apply bg-blue-500 shadow-[0_0_0_2px_rgb(var(--primary))];
+    }
+  }
+}
+
+/* .toc {
+  @apply py-2 pr-3;
+
+  .toc-list .toc-list {
+    @apply border-l-2 border-muted ml-5;
+  }
+
+  .toc-link {
+    @apply flex text-sm w-[100%] py-1.5 flex relative pl-9 hover:text-foreground text-muted-foreground;
+    &:before {
+      @apply content-[''] w-[10px] h-[10px] border-2 border-card rounded-full top-3 left-4 bg-card absolute shadow-[0_0_0_2px_rgb(var(--border))];
+    }
+  }
+
+  .is-active-link {
+    @apply font-bold text-foreground;
+    &:before {
+      @apply bg-primary outline-primary shadow-[0_0_0_2px_rgb(var(--primary))];
+    }
+  }
+} */

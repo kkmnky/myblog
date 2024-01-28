@@ -12,7 +12,7 @@ export default function PostCard(post: Post) {
           <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
             <time dateTime={date}>{format(parseISO(post.date), "MMM")}</time>
           </span>
-          <span className="font-medium text-lg text-gray-800 title-font leading-none">
+          <span className="font-medium text-lg text-gray-500 title-font leading-none">
             <time dateTime={date}>{getDate(parseISO(post.date))}</time>
           </span>
         </div>

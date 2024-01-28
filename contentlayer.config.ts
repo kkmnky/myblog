@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypeSlug from "rehype-slug";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -17,4 +18,10 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({ contentDirPath: "posts", documentTypes: [Post] });
+export default makeSource({
+  contentDirPath: "posts",
+  documentTypes: [Post],
+  markdown: {
+    rehypePlugins: [rehypeSlug],
+  },
+});
