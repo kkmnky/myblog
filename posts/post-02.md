@@ -102,7 +102,7 @@ const config: Config = {
 
 #### note
 
-:::note-primary
+:::note-blue-500
 primary / 第一色
 :::
 

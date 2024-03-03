@@ -18,6 +18,8 @@
     "pliny": "^0.1.6",
     "react": "^18",
     "react-dom": "^18",
+    "remark-directive": "^3.0.0",
+    "remark-directive-rehype": "^0.4.2",
     "zenn-content-css": "^0.1.151"
   },
   "devDependencies": {

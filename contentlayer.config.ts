@@ -1,5 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeSlug from "rehype-slug";
+import remarkDirective from "remark-directive";
+import remarkDirectiveRehype from "remark-directive-rehype";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -22,6 +24,11 @@ export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
   markdown: {
+    remarkPlugins: [
+      remarkDirective, // 追加
+      //@ts-expect-error
+      remarkDirectiveRehype, // 追加
+    ],
     rehypePlugins: [rehypeSlug],
   },
 });
