@@ -1,7 +1,6 @@
 import siteMetadata from "@/siteMetadata";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
-import Image from "@/components/ui-elements/Image";
 import PostCard from "@/features/posts/components/PostCard";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-xl">
       <div className="text-center space-y-2 pb-8 pt-6 md:space-y-5">
-        <Image
+        <img
           src="/static/logo.jpg"
           alt="logo"
           width={64}

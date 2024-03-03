@@ -3,7 +3,6 @@ import { HEADER_NAV_LINKS } from "@/constants";
 import Link from "@/components/ui-elements/Link";
 import ThemeSwitch from "@/components/ui-parts/ThemeSwitch";
 import MobileNav from "@/components/ui-parts/MobileNav";
-import Image from "@/components/ui-elements/Image";
 
 export default function Header() {
   return (
@@ -12,10 +11,10 @@ export default function Header() {
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <Image src="/static/logo.jpg" alt="logo" width={48} height={48} />
+              <img src="/static/logo.jpg" alt="logo" width={48} height={48} />
             </div>
             {typeof siteMetadata.headerTitle === "string" ? (
-              <div className="text-2xl font-semibold sm:block">
+              <div className="text-2xl font-semibold sm:block ml-2">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
