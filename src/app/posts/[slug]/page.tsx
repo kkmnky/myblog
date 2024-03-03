@@ -19,27 +19,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) return notFound();
 
   return (
-    // <article className="mx-auto max-w-xl py-8">
-    //   <div className="mb-8 text-center">
-    //     <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-    //       {format(parseISO(post.date), "LLLL d, yyyy")}
-    //     </time>
-    //     <h1 className="text-3xl font-bold">{post.title}</h1>
-    //   </div>
-    //   <div
-    //     className="[&>*]:mb-3 [&>*:last-child]:mb-0"
-    //     dangerouslySetInnerHTML={{ __html: post.body.html }}
-    //   />
-    // </article>
     <article className="py-8">
       <div className="flex flex-row gap-2 px-8">
         <div className="w-full">
-          {/* <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-            {format(parseISO(post.date), "LLLL d, yyyy")}
-          </time>
-          <h1 className="mb-6 border-b-2 border-secondary text-4xl font-extrabold text-on-secondary-50">
-            {post.title}
-          </h1> */}
           <div className="mb-10 text-center space-y-2">
             <time dateTime={post.date} className="text-sm text-gray-600">
               {format(parseISO(post.date), "LLLL d, yyyy")}
