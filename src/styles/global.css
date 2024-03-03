@@ -58,3 +58,7 @@ input:-webkit-autofill:focus {
     }
   }
 }
+
+.note-error {
+  @apply no-underline;
+}
