@@ -1,11 +1,26 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  ComputedFields,
+  defineDocumentType,
+  makeSource,
+} from "contentlayer/source-files";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
 
+const computedFields: ComputedFields = {
+  slug: {
+    type: "string",
+    resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ""),
+  },
+  url: {
+    type: "string",
+    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+  },
+};
+
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `**/*.md`,
+  filePathPattern: `posts/**/*.md`,
   fields: {
     title: { type: "string", required: true },
     date: { type: "date", required: true },
@@ -13,15 +28,12 @@ export const Post = defineDocumentType(() => ({
     summary: { type: "string" },
   },
   computedFields: {
-    url: {
-      type: "string",
-      resolve: (post) => `/posts/${post._raw.flattenedPath}`,
-    },
+    ...computedFields,
   },
 }));
 
 export default makeSource({
-  contentDirPath: "posts",
+  contentDirPath: "data",
   documentTypes: [Post],
   markdown: {
     remarkPlugins: [
