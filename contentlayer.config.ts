@@ -32,9 +32,25 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+export const Author = defineDocumentType(() => ({
+  name: "Author",
+  filePathPattern: "authors/**/*.md",
+  fields: {
+    name: { type: "string", required: true },
+    avatar: { type: "string" },
+    occupation: { type: "string" },
+    twitter: { type: "string" },
+    github: { type: "string" },
+    layout: { type: "string" },
+  },
+  computedFields: {
+    ...computedFields,
+  },
+}));
+
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Post],
+  documentTypes: [Post, Author],
   markdown: {
     remarkPlugins: [
       remarkDirective, // 追加
