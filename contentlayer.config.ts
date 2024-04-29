@@ -6,6 +6,7 @@ import {
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
+import rehypePrettyCode from "rehype-pretty-code";
 
 const computedFields: ComputedFields = {
   slug: {
@@ -57,6 +58,10 @@ export default makeSource({
       //@ts-expect-error
       remarkDirectiveRehype, // 追加
     ],
-    rehypePlugins: [rehypeSlug],
+    rehypePlugins: [
+      rehypeSlug,
+      //@ts-expect-error
+      [rehypePrettyCode, { theme: "catppuccin-macchiato" }],
+    ],
   },
 });
