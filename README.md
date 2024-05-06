@@ -6,8 +6,8 @@ kkmnky のブログコード。[こちら](https://kmnky.dev/)にて公開中。
 
 ブログのコードについては以下を参照。
 
-- [初めてのブログの構築](https://kmnky.dev/posts/20240301)
-- [ブログをデプロイする](https://kmnky.dev/posts/20240303)
+- [初めてのブログの構築](https://kmnky.dev/posts/20240301_blog-start)
+- [ブログをデプロイする](https://kmnky.dev/posts/20240303_blog-deploy)
 
 ## ローカル
 
