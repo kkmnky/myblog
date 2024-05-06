@@ -31,6 +31,7 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     ...computedFields,
   },
+  contentType: "markdown",
 }));
 
 export const Author = defineDocumentType(() => ({

@@ -9,6 +9,8 @@ const siteMetadata = {
   theme: "light",
   github: "https://github.com/kkmnky",
   twitter: "https://twitter.com/kamiken333",
+  siteUrl: "https://kmnky.dev",
+  socialBanner: "/static/logo.jpg",
 };
 
 module.exports = siteMetadata;
