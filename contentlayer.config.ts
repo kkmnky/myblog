@@ -7,6 +7,9 @@ import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
 import rehypePrettyCode from "rehype-pretty-code";
+import { slug } from 'github-slugger'
+import { writeFileSync } from "fs";
+import { Post as PostType } from "contentlayer/generated";
 
 const computedFields: ComputedFields = {
   slug: {
@@ -50,6 +53,26 @@ export const Author = defineDocumentType(() => ({
   },
 }));
 
+/**
+ * Count the occurrences of all tags across blog posts and write to json file
+ */
+function createTagCount(allPosts: PostType[]) {
+  const tagCount: Record<string, number> = {}
+  allPosts.forEach((post) => {
+    if (post.tags) {
+      post.tags.forEach((tag) => {
+        const formattedTag = tag
+        if (formattedTag in tagCount) {
+          tagCount[formattedTag] += 1
+        } else {
+          tagCount[formattedTag] = 1
+        }
+      })
+    }
+  })
+  writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
+}
+
 export default makeSource({
   contentDirPath: "data",
   documentTypes: [Post, Author],
@@ -64,5 +87,9 @@ export default makeSource({
       //@ts-expect-error
       [rehypePrettyCode, { theme: "catppuccin-macchiato" }],
     ],
+  },
+  onSuccess: async (importData) => {
+    const { allPosts } = await importData()
+    createTagCount(allPosts)
   },
 });
