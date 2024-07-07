@@ -1,4 +1,5 @@
 import Link from "@/components/ui-elements/Link";
+import Tag from "@/components/ui-parts/Tag";
 import { Post } from "contentlayer/generated";
 import { format, getDate, parseISO } from "date-fns";
 
@@ -18,12 +19,9 @@ export default function PostCard(post: Post) {
         </div>
         <div className="flex-grow pl-6">
           <div className="flex flex-wrap">
-            {/* {tags.map((tag) => (
-                    <Tag key={tag} text={tag} />
-                  ))} */}
-            <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">
-              CATEGORY
-            </h2>
+            {tags.map((tag) => (
+              <Tag key={tag} text={tag} />
+            ))}
           </div>
           <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
             <Link
