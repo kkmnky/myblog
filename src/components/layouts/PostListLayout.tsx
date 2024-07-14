@@ -29,11 +29,11 @@ export default function PostListLayout({
 
   return (
     <>
-      <div>
+      <div className="max-sm:divide-y divide-gray-200 dark:divide-gray-700">
         {/* タイトル （画面が小さい時表示） */}
-        <div className="pb-6 pt-6">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {title}
+        <div className="space-y-2 pb-2 pt-2 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:hidden sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
+            Tag: {title}
           </h1>
         </div>
 
@@ -76,7 +76,7 @@ export default function PostListLayout({
           </div>
 
           {/* 記事一覧 */}
-          <div>
+          <div className='mt-6'>
             <ul>
               {posts.map((post, index) => (
                 <li key={index}>

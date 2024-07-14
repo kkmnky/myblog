@@ -14,9 +14,9 @@ export default function AuthorLayout({ children, author }: Props) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-2 pt-2 md:space-y-5">
-          <h2 className="text-3xl font-extrabold leading-9 tracking-tight font-black sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
             About
-          </h2>
+          </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center space-x-2 pt-8">
