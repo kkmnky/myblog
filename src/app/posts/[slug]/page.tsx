@@ -5,13 +5,18 @@ import { notFound } from "next/navigation";
 import "zenn-content-css";
 import { Toc } from "@/components/ui-parts/Toc";
 
-export const generateStaticParams = async () =>
-  allPosts.map((post) => ({ slug: post.slug }));
+export const generateStaticParams = async () => (
+    allPosts.map((post) => ({ slug: post.slug }))
+)
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) return notFound();
-  return { title: post.title };
+
+  return {
+    title: post.title,
+    description: post.summary
+  };
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {

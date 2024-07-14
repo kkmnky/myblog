@@ -23,8 +23,8 @@ export default function Home() {
           {siteMetadata.description}
         </p>
       </div>
-      {posts.map((post, idx) => (
-        <PostCard key={idx} {...post} />
+      {posts.map((post, index) => (
+        <PostCard key={index} post={post} />
       ))}
     </div>
   );

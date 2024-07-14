@@ -14,7 +14,7 @@ export default function AuthorLayout({ children, author }: Props) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-2 pt-2 md:space-y-5">
-          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-600 dark:text-gray-400 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
+          <h2 className="text-3xl font-extrabold leading-9 tracking-tight font-black sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
             About
           </h2>
         </div>

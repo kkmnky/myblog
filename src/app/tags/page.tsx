@@ -1,20 +1,16 @@
-// import Link from '@/components/Link'
-// import Tag from '@/components/Tag'
-// import { slug } from 'github-slugger'
-import tagData from 'src/app/tag-data.json'
-
+import tagData from 'src/tagList.json'
 import Tag from "@/components/ui-parts/Tag";
 import Link from "next/link";
+import siteMetadata from '@/siteMetadata';
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  return { title: 'Tags', description: 'List of tags attached to my posts' };
+  return { title: 'Tags', description: `List of tags attached to ${siteMetadata.title}` };
 };
 
 export default async function Page() {
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
-  console.log(sortedTags)
   return (
     <div className='flex flex-col mx-auto max-w-xl'>
       <h1 className="mt-8 mb-16 text-center text-3xl font-black">Tags</h1>

@@ -3,9 +3,13 @@ import Tag from "@/components/ui-parts/Tag";
 import { Post } from "contentlayer/generated";
 import { format, getDate, parseISO } from "date-fns";
 
-export default function PostCard(post: Post) {
+type PostCardProps = {
+  post: Post
+}
+
+export default function PostCard({post}: PostCardProps) {
   const { date, title, summary, tags } = post;
-  // const { slug, date, title, summary, tags } = post;
+
   return (
     <article>
       <div className="h-full flex items-start mb-8">
@@ -27,12 +31,11 @@ export default function PostCard(post: Post) {
             <Link
               href={post.url}
               className="text-gray-700 hover:text-blue-500 dark:text-gray-400"
-              // className="text-gray-900 dark:text-gray-100"
             >
               {title}
             </Link>
           </h1>
-          <p className="leading-relaxed mb-5">{summary}</p>
+          <p className="leading-relaxed mb-5 text-gray-500">{summary}</p>
         </div>
       </div>
     </article>

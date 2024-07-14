@@ -70,7 +70,7 @@ function createTagCount(allPosts: PostType[]) {
       })
     }
   })
-  writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync('./src/tagList.json', JSON.stringify(tagCount))
 }
 
 export default makeSource({
