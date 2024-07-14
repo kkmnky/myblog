@@ -33,7 +33,7 @@ export default function PostListLayout({
         {/* タイトル （画面が小さい時表示） */}
         <div className="space-y-2 pb-2 pt-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:hidden sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
-            Tag: {title}
+            { title === 'All Posts' ? title : `Tag: ${title}`}
           </h1>
         </div>
 
