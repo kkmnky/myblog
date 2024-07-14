@@ -3,7 +3,7 @@ title: ブログをデプロイする
 date: 2024-03-03
 summary: ローカルで開発したブログをCloudflareへデプロイする
 tags:
-  - ブログ
+  - ブログ作成
   - Next.js
   - Cloudflare
 ---

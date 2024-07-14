@@ -4,7 +4,7 @@ date: 2024-07-07
 summary: ざっくりつかむCSS設計に関する読書日記
 tags:
   - 読書日記
-  - frontend
+  - フロントエンド
   - CSS
 ---
 
