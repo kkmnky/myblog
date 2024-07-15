@@ -5,11 +5,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: "export",
-};
-
-module.exports = withContentlayer(nextConfig);
-
-module.exports = {
   async redirects() {
     return [
       {
@@ -19,4 +14,6 @@ module.exports = {
       }
     ]
   }
-}
+};
+
+module.exports = withContentlayer(nextConfig);
