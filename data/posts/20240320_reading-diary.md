@@ -3,7 +3,8 @@ title: 「技術書」の読書術
 date: 2024-03-20
 summary: 「技術書」の読書術に関する読書日記
 tags:
-  - 読書日記
+  - label: 読書日記
+    link: reading-diary
 ---
 
 ## はじめに

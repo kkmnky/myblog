@@ -3,7 +3,8 @@ title: 世界一流エンジニアの思考法
 date: 2024-04-07
 summary: 世界一流エンジニアの思考法の読書日記
 tags:
-  - 読書日記
+  - label: 読書日記
+    link: reading-diary
 ---
 
 ## はじめに

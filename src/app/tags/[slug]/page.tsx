@@ -1,36 +1,32 @@
 import PostListLayout from '@/components/layouts/PostListLayout'
-import { slug } from 'github-slugger'
 import { allPosts } from 'contentlayer/generated'
-import tagData from 'src/tagList.json'
+import tagList from 'src/tagList.json'
 import { compareDesc } from 'date-fns'
 import siteMetadata from '@/siteMetadata'
+import { CountedTag } from '@/features/tags/types'
 
-
-const tagCounts = tagData as Record<string, number>
-const tagKeys = Object.keys(tagCounts)
+const countedTags = tagList as CountedTag[]
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const tag = tagKeys.filter(tag => slug(tag) === decodeURI(params.slug))[0]
+  const tag = countedTags.filter(tag => tag.link === params.slug)[0]
   return {
-    title: `${tag} | ${siteMetadata.title}`,
-    description: `List of posts on ${siteMetadata.title} tagged ${tag}`,
+    title: `${tag.label} | ${siteMetadata.title}`,
+    description: `List of posts on ${siteMetadata.title} tagged ${tag.label}`,
   }
 }
 
 export const generateStaticParams = async () => {
-  const paths = tagKeys.map((tag) => ({
-    slug: encodeURI(slug(tag)),
-  }))
+  const paths = tagList.map(tag => ({slug: tag.link}))
   return paths
 }
 
 export default function TagPage({ params }: { params: { slug: string } }) {
-  const tag = tagKeys.filter(tag => slug(tag) === decodeURI(params.slug))[0]
+  const targetTag = countedTags.filter(tag => tag.link === params.slug)[0]
   const filteredPosts = allPosts
-    .filter((post) => post.tags && post.tags.includes(tag))
+    .filter(post => post.tags.some(tag => tag.label === targetTag.label))
     .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <PostListLayout title={tag} posts={filteredPosts}/>
+    <PostListLayout title={targetTag.label} posts={filteredPosts}/>
   )
 }

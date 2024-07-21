@@ -1,16 +1,16 @@
-import tagData from 'src/tagList.json'
-import Tag from "@/components/ui-parts/Tag";
+import tagList from 'src/tagList.json'
+import Tag from "@/features/tags/components/Tag";
 import Link from "next/link";
 import siteMetadata from '@/siteMetadata';
+import { CountedTag } from '@/features/tags/types';
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   return { title: 'Tags', description: `List of tags attached to ${siteMetadata.title}` };
 };
 
 export default async function Page() {
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
+  const countedTags = tagList as CountedTag[]
+  const sortedTags = countedTags.sort((a, b) => b.count - a.count)
   return (
     <div className='divide-y divide-gray-200 dark:divide-gray-700"'>
       <div className="space-y-2 pb-2 pt-2 md:space-y-5">
@@ -20,17 +20,17 @@ export default async function Page() {
       </div>
       <div className='flex flex-col pt-6'>
         <div className="flex flex-wrap items-start justify-start">
-          {tagKeys.length === 0 && 'No tags found.'}
+          {countedTags.length === 0 && 'No tags found.'}
           {sortedTags.map((tag) => {
             return (
-              <div key={tag} className="mb-2 mr-5 mt-2">
-                <Tag text={tag} />
+              <div key={tag.label} className="mb-2 mr-5 mt-2">
+                <Tag label={tag.label} link={tag.link} />
                 <Link
-                  href={`/tags/${tag}`}
+                  href={`/tags/${tag.link}`}
                   className="-ml-2 font-semibold uppercase text-gray-600 dark:text-gray-300"
                   aria-label={`View posts tagged ${tag}`}
                 >
-                  {` (${tagCounts[tag]})`}
+                  {` (${tag.count})`}
                 </Link>
               </div>
             )

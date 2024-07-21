@@ -3,9 +3,11 @@ title: ざっくりつかむCSS設計
 date: 2024-07-07
 summary: ざっくりつかむCSS設計に関する読書日記
 tags:
-  - 読書日記
-  - フロントエンド
-  - CSS
+  - label: 読書日記
+    link: reading-diary
+  - label: フロントエンド
+    link: frontend
+  - label: CSS
 ---
 
 ## はじめに

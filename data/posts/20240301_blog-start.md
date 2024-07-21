@@ -3,10 +3,11 @@ title: 初めてのブログの構築
 date: 2024-03-01
 summary: Next.js + Tailwind CSS + Contentlayer で自分だけのMarkdownブログを作る
 tags:
-  - ブログ作成
-  - Next.js
-  - Tailwind CSS
-  - Contentlayer
+  - label: ブログ作成
+    link: myblog
+  - label: Next.js
+  - label: Tailwind CSS
+  - label: Contentlayer
 ---
 
 ## ブログを作ったきっかけ

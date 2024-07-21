@@ -1,7 +1,8 @@
 import Link from "@/components/ui-elements/Link";
-import Tag from "@/components/ui-parts/Tag";
+import Tag from "@/features/tags/components/Tag";
 import { Post } from "contentlayer/generated";
 import { format, getDate, parseISO } from "date-fns";
+import { slug } from "github-slugger";
 
 type PostCardProps = {
   post: Post
@@ -24,7 +25,7 @@ export default function PostCard({post}: PostCardProps) {
         <div className="flex-grow pl-6">
           <div className="flex flex-wrap">
             {tags.map((tag) => (
-              <Tag key={tag} text={tag} />
+              <Tag key={tag.label} label={tag.label} link={tag.link || slug(tag.label)} />
             ))}
           </div>
           <h1 className="title-font text-xl font-medium text-gray-900 mb-3">

@@ -3,8 +3,9 @@ title: 動かして学ぶ Flutter開発入門
 date: 2024-05-19
 summary: 動かして学ぶFlutter開発入門に関する読書日記
 tags:
-  - 読書日記
-  - Flutter
+  - label: 読書日記
+    link: reading-diary
+  - label: Flutter
 ---
 
 ## はじめに

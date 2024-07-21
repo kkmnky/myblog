@@ -5,15 +5,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: "export",
-  async redirects() {
-    return [
-      {
-        source: '/tags/reading_diary',
-        destination: '/tags/%E8%AA%AD%E6%9B%B8%E6%97%A5%E8%A8%98',
-        permanent: true
-      }
-    ]
-  }
 };
 
 module.exports = withContentlayer(nextConfig);

@@ -1,6 +1,7 @@
 import {
   ComputedFields,
   defineDocumentType,
+  defineNestedType,
   makeSource,
 } from "contentlayer/source-files";
 import rehypeSlug from "rehype-slug";
@@ -10,6 +11,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { slug } from 'github-slugger'
 import { writeFileSync } from "fs";
 import { Post as PostType } from "contentlayer/generated";
+import { CountedTag } from "./src/features/tags/types"
 
 const computedFields: ComputedFields = {
   slug: {
@@ -22,13 +24,21 @@ const computedFields: ComputedFields = {
   },
 };
 
+const Tag = defineNestedType(() => ({
+  name: 'Tag',
+  fields: {
+    label: { type: 'string', required: true },
+    link: { type: 'string', required: false }
+  }
+}))
+
 export const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `posts/**/*.md`,
   fields: {
     title: { type: "string", required: true },
     date: { type: "date", required: true },
-    tags: { type: "list", of: { type: "string" }, default: [] },
+    tags: { type: "list", of: Tag, default: [] },
     summary: { type: "string" },
   },
   computedFields: {
@@ -54,23 +64,25 @@ export const Author = defineDocumentType(() => ({
 }));
 
 /**
- * Count the occurrences of all tags across blog posts and write to json file
+ * 全てのタグを集計してJSONファイルへ
  */
+
 function createTagCount(allPosts: PostType[]) {
-  const tagCount: Record<string, number> = {}
-  allPosts.forEach((post) => {
-    if (post.tags) {
-      post.tags.forEach((tag) => {
-        const formattedTag = tag
-        if (formattedTag in tagCount) {
-          tagCount[formattedTag] += 1
-        } else {
-          tagCount[formattedTag] = 1
-        }
-      })
+  // 全てのタグを取得
+  const allTags = allPosts.flatMap(post => post.tags);
+
+  const tagMap: { [key: string]: CountedTag } = {};
+  allTags.forEach(tag => {
+    const link = tag.link || slug(tag.label)
+    if (tagMap[link]) {
+      tagMap[link].count++;
+    } else {
+      tagMap[link] = { label: tag.label, link: link, count: 1 };
     }
-  })
-  writeFileSync('./src/tagList.json', JSON.stringify(tagCount))
+  });
+
+  // writeFileSync('./src/tagList.json', JSON.stringify(tagMap))
+  writeFileSync('./src/tagList.json', JSON.stringify(Object.values(tagMap)))
 }
 
 export default makeSource({

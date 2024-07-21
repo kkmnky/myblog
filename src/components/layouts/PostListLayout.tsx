@@ -2,20 +2,15 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { slug } from 'github-slugger'
-// import { formatDate } from 'pliny/utils/formatDate'
-// import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Post } from 'contentlayer/generated'
-// import Tag from '@/components/Tag'
-// import siteMetadata from '@/data/siteMetadata'
-import tagData from 'src/tagList.json'
+import tagList from 'src/tagList.json'
 import Link from '@/components/ui-elements/Link'
 import PostCard from '@/features/posts/components/PostCard'
+import { CountedTag } from '@/features/tags/types'
 
 type PostListLayoutProps = {
   posts: Post[]
   title: string
-  // initialDisplayPosts?: CoreContent<Blog>[]
 }
 
 export default function PostListLayout({
@@ -23,9 +18,8 @@ export default function PostListLayout({
   title,
 }: PostListLayoutProps) {
   const pathname = usePathname()
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
+  const countedTags = tagList as CountedTag[]
+  const sortedTags = countedTags.sort((a, b) => b.count - a.count)
 
   return (
     <>
@@ -54,18 +48,18 @@ export default function PostListLayout({
               <ul>
                 {sortedTags.map((tag) => {
                   return (
-                    <li key={tag} className="my-3">
-                      {pathname.split('/tags/')[1] === encodeURI(slug(tag)) ? (
+                    <li key={tag.label} className="my-3">
+                      {pathname.split('/tags/')[1] === tag.link ? (
                         <h3 className="inline px-3 py-2 text-sm font-bold text-indigo-500">
-                          {`${tag} (${tagCounts[tag]})`}
+                          {`${tag.label} (${tag.count})`}
                         </h3>
                       ) : (
                         <Link
-                          href={`/tags/${slug(tag)}`}
+                          href={`/tags/${tag.link}`}
                           className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-500"
                           aria-label={`View posts tagged ${tag}`}
                         >
-                          {`${tag} (${tagCounts[tag]})`}
+                          {`${tag.label} (${tag.count})`}
                         </Link>
                       )}
                     </li>
