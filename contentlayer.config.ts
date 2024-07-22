@@ -81,7 +81,6 @@ function createTagCount(allPosts: PostType[]) {
     }
   });
 
-  // writeFileSync('./src/tagList.json', JSON.stringify(tagMap))
   writeFileSync('./src/tagList.json', JSON.stringify(Object.values(tagMap)))
 }
 
