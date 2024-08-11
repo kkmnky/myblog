@@ -20,7 +20,7 @@ export const Toc: React.VFC = () => {
   return (
     <nav className="lg:fixed">
       <div className="font-bold text-xl">目次</div>
-      <div className="toc" />
+      <div className="toc overflow-y-auto" style={{ maxHeight: '70vh'}} />
     </nav>
   );
 };
