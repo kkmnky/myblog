@@ -4,6 +4,8 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import "zenn-content-css";
 import { Toc } from "@/components/ui-parts/Toc";
+import Tag from "@/features/tags/components/Tag";
+import { slug } from "github-slugger";
 
 export const generateStaticParams = async () => (
     allPosts.map((post) => ({ slug: post.slug }))
@@ -32,6 +34,11 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
               {format(parseISO(post.date), "LLLL d, yyyy")}
             </time>
             <h1 className="text-4xl font-bold">{post.title}</h1>
+            <div className="flex flex-wrap justify-center">
+              {post.tags.map((tag) => (
+                <Tag key={tag.label} label={tag.label} link={tag.link || slug(tag.label)} />
+              ))}
+            </div>
           </div>
           <div
             className="markdown lg:px-8 znc"
