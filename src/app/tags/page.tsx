@@ -1,11 +1,14 @@
 import tagList from 'src/tagList.json'
 import Tag from "@/features/tags/components/Tag";
 import Link from "next/link";
-import siteMetadata from '@/siteMetadata';
 import { CountedTag } from '@/features/tags/types';
+import { genPageMetadata } from '@/components/functional/seo';
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  return { title: 'Tags', description: `List of tags attached to ${siteMetadata.title}` };
+  return genPageMetadata({
+    title: `Tags`,
+    description: `投稿記事のタグ一覧になります。投稿数順にソートされています。`,
+  })
 };
 
 export default async function Page() {

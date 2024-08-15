@@ -2,17 +2,17 @@ import PostListLayout from '@/components/layouts/PostListLayout'
 import { allPosts } from 'contentlayer/generated'
 import tagList from 'src/tagList.json'
 import { compareDesc } from 'date-fns'
-import siteMetadata from '@/siteMetadata'
 import { CountedTag } from '@/features/tags/types'
+import { genPageMetadata } from '@/components/functional/seo'
 
 const countedTags = tagList as CountedTag[]
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tag = countedTags.filter(tag => tag.link === params.slug)[0]
-  return {
-    title: `${tag.label} | ${siteMetadata.title}`,
-    description: `List of posts on ${siteMetadata.title} tagged ${tag.label}`,
-  }
+  return genPageMetadata({
+    title: `Tag:${tag.label}`,
+    description: `${tag.label}タグがついている記事の一覧です。`,
+  })
 }
 
 export const generateStaticParams = async () => {

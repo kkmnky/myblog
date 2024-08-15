@@ -8,17 +8,17 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between py-10">
       <div>
-        <Link href="/" aria-label={siteMetadata.headerTitle}>
+        <Link href="/" aria-label={siteMetadata.siteName}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <img src="/static/logo.jpg" alt="logo" width={48} height={48} />
             </div>
-            {typeof siteMetadata.headerTitle === "string" ? (
+            {typeof siteMetadata.siteName === "string" ? (
               <div className="text-2xl font-semibold sm:block ml-2">
-                {siteMetadata.headerTitle}
+                {siteMetadata.siteName}
               </div>
             ) : (
-              siteMetadata.headerTitle
+              siteMetadata.siteName
             )}
           </div>
         </Link>

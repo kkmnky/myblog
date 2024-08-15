@@ -6,6 +6,7 @@ import "zenn-content-css";
 import { Toc } from "@/components/ui-parts/Toc";
 import Tag from "@/features/tags/components/Tag";
 import { slug } from "github-slugger";
+import { genPageMetadata } from "@/components/functional/seo";
 
 export const generateStaticParams = async () => (
     allPosts.map((post) => ({ slug: post.slug }))
@@ -15,10 +16,11 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) return notFound();
 
-  return {
+  return genPageMetadata({
     title: post.title,
-    description: post.summary
-  };
+    description: post.summary,
+    isArticle: true,
+  })
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {

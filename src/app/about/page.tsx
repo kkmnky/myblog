@@ -1,10 +1,12 @@
 import { Author, allAuthors } from "contentlayer/generated";
 import AuthorLayout from "@/components/layouts/AuthorLayout";
 import "zenn-content-css";
+import { genPageMetadata } from "@/components/functional/seo";
 
-export const generateMetadata = () => {
-  return { title: "About - kmnky" };
-};
+export const metadata = genPageMetadata({
+    title: "About kmnky",
+    description: "本ブログの執筆者であるkmnkyの自己紹介です。"
+  })
 
 export default function Page() {
   const author = allAuthors.find(
