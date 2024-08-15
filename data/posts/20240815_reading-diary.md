@@ -10,7 +10,7 @@ tags:
 
 ## はじめに
 
-以前、CSSを勉強するために[ざっくりつかむCSS設計](20240707_reading-diary)という本を読み、読書日記の記事を書きました。同じ分野の本も複数読んだ方が良いと思い、その記事の中で次に読みたい候補に挙げた、インプレス社の "Web制作者のためのCSS設計の教科書 モダンWeb開発に欠かせない「修正しやすいCSS」の設計手法" を今回は読みました。
+以前、CSSを勉強するために[ざっくりつかむCSS設計](20240707_reading-diary)という本を読み、読書日記の記事を書きました。同じ分野の本も複数読んだ方が良いと思い、その記事の中で次に読みたい候補に挙げた、インプレス社の "Web制作者のためのCSS設計の教科書 モダンWeb開発に欠かせない「修正しやすいCSS」の設計手法" を読みました。
 
 ![Web制作者のためのCSS設計の教科書 モダンWeb開発に欠かせない「修正しやすいCSS」の設計手法](https://m.media-amazon.com/images/I/71T86JBdBmL._SY522_.jpg)
 _[Web制作者のためのCSS設計の教科書 モダンWeb開発に欠かせない「修正しやすいCSS」の設計手法](https://www.amazon.co.jp/Web%E5%88%B6%E4%BD%9C%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AECSS%E8%A8%AD%E8%A8%88%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E3%83%A2%E3%83%80%E3%83%B3Web%E9%96%8B%E7%99%BA%E3%81%AB%E6%AC%A0%E3%81%8B%E3%81%9B%E3%81%AA%E3%81%84%E3%80%8C%E4%BF%AE%E6%AD%A3%E3%81%97%E3%82%84%E3%81%99%E3%81%84CSS%E3%80%8D%E3%81%AE%E8%A8%AD%E8%A8%88%E6%89%8B%E6%B3%95-%E8%B0%B7-%E6%8B%93%E6%A8%B9/dp/4844336355/ref=sr_1_5?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dib=eyJ2IjoiMSJ9.LPARDk_pe73m3xT1YwtHjYUC7ZntRMcKjhLhFZ3kN0TzgLm5JE1hzQaeBfE-Y0MJ.V5TS7vAkWdvMQiK4G0em6gxf0t38CSfiQHmeRWXgOK4&dib_tag=se&keywords=%E3%81%96%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%A4%E3%81%8B%E3%82%80+css%E8%A8%AD%E8%A8%88&qid=1720322082&sr=8-5)_
