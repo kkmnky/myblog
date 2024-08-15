@@ -12,7 +12,7 @@ const siteMetadata = {
   twitter: "https://twitter.com/kamiken333",
   twitterUser: "@kamiken333",
   siteUrl: "https://kmnky.dev",
-  ogImage: "/static/og-image.jpg",
+  ogImage: "/static/og-image.png",
 };
 
 module.exports = siteMetadata;
