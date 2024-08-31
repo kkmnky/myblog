@@ -5,6 +5,8 @@ summary: 「技術書」の読書術に関する読書日記
 tags:
   - label: 読書日記
     link: reading-diary
+  - label: 自己啓発
+    link: self-development
 ---
 
 ## はじめに

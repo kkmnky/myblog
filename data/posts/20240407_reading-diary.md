@@ -5,6 +5,8 @@ summary: 世界一流エンジニアの思考法の読書日記
 tags:
   - label: 読書日記
     link: reading-diary
+  - label: 自己啓発
+    link: self-development
 ---
 
 ## はじめに

@@ -5,6 +5,8 @@ summary: Unlearn(アンラーン) 人生100年時代の新しい「学び」 を
 tags:
   - label: 読書日記
     link: reading-diary
+  - label: 自己啓発
+    link: self-development
 ---
 
 ## はじめに
