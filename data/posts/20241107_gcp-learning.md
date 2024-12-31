@@ -3,7 +3,7 @@ title: Google Skill Boost（基礎編）
 date: 2024-11-07
 summary: Google Skill BoostでGoogle Cloud Infrastructure for AWS professionalsというLearning Pathの概要や感想、学習記録
 tags:
-  - label: GCP
+  - label: GoogleCloud
 ---
 
 ## はじめに
