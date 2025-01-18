@@ -8,6 +8,7 @@ import Link from "@/components/ui-elements/Link"
 import PostCard from "@/features/posts/components/PostCard"
 import { CountedTag } from "@/features/tags/types"
 import Pagination, { PaginationProps } from "@/components/ui-parts/Pagination"
+import { groupPostsByYear } from "@/features/posts/functions/groupPost"
 
 type PostListLayoutProps = {
   posts: Post[]
@@ -23,6 +24,8 @@ export default function PostListLayout({
   const pathname = usePathname()
   const countedTags = tagList as CountedTag[]
   const sortedTags = countedTags.sort((a, b) => b.count - a.count)
+
+  const groupedPosts = groupPostsByYear(posts)
 
   return (
     <>
@@ -75,11 +78,20 @@ export default function PostListLayout({
           {/* 記事一覧 */}
           <div className="mt-6">
             <ul>
-              {posts.map((post, index) => (
-                <li key={index}>
-                  <PostCard post={post} />
-                </li>
-              ))}
+              {Object.keys(groupedPosts)
+                .sort((a, b) => Number(b) - Number(a)) // 年を降順にソート
+                .map((year) => (
+                  <li key={year}>
+                    {/* 年の区切り線とヘッダー */}
+                    <h2>Year {year}</h2>
+                    <div className="border-t border-gray-200 my-2 mb-8"></div>
+
+                    {/* 年ごとの記事一覧 */}
+                    {groupedPosts[year].map((post, index) => (
+                      <PostCard key={index} post={post} />
+                    ))}
+                  </li>
+                ))}
             </ul>
 
             {/* ページネーション */}

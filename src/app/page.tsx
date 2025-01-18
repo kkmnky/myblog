@@ -3,6 +3,7 @@ import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 import PostCard from "@/features/posts/components/PostCard"
 import Link from "next/link"
+import { groupPostsByYear } from "@/features/posts/functions/groupPost"
 
 const MAX_DISPLAY = 15
 
@@ -10,7 +11,7 @@ export default function Home() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   )
-  const displayPosts = posts.slice(0, MAX_DISPLAY)
+  const groupedDisplayPosts = groupPostsByYear(posts.slice(0, MAX_DISPLAY))
 
   return (
     <div className="mx-auto max-w-xl">
@@ -29,9 +30,20 @@ export default function Home() {
           {siteMetadata.shortDescription}
         </p>
       </div>
-      {displayPosts.map((post, index) => (
-        <PostCard key={index} post={post} />
-      ))}
+      {Object.keys(groupedDisplayPosts)
+        .sort((a, b) => Number(b) - Number(a)) // 年を降順にソート
+        .map((year) => (
+          <div key={year}>
+            {/* 年の区切り線とヘッダー */}
+            <h2>Year {year}</h2>
+            <div className="border-t border-gray-200 my-2 mb-8"></div>
+
+            {/* 年ごとの記事一覧 */}
+            {groupedDisplayPosts[year].map((post, index) => (
+              <PostCard key={index} post={post} />
+            ))}
+          </div>
+        ))}
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
