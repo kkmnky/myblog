@@ -1,21 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-'use client'
+"use client"
 
-import { usePathname } from 'next/navigation'
-import type { Post } from 'contentlayer/generated'
-import tagList from 'src/tagList.json'
-import Link from '@/components/ui-elements/Link'
-import PostCard from '@/features/posts/components/PostCard'
-import { CountedTag } from '@/features/tags/types'
+import { usePathname } from "next/navigation"
+import type { Post } from "contentlayer/generated"
+import tagList from "src/tagList.json"
+import Link from "@/components/ui-elements/Link"
+import PostCard from "@/features/posts/components/PostCard"
+import { CountedTag } from "@/features/tags/types"
+import Pagination, { PaginationProps } from "@/components/ui-parts/Pagination"
 
 type PostListLayoutProps = {
   posts: Post[]
   title: string
+  pagination?: PaginationProps
 }
 
 export default function PostListLayout({
   posts,
   title,
+  pagination,
 }: PostListLayoutProps) {
   const pathname = usePathname()
   const countedTags = tagList as CountedTag[]
@@ -27,7 +30,7 @@ export default function PostListLayout({
         {/* タイトル （画面が小さい時表示） */}
         <div className="space-y-2 pb-2 pt-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:hidden sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
-            { title === 'All Posts' ? title : `Tag: ${title}`}
+            {title === "All Posts" ? title : `Tag: ${title}`}
           </h1>
         </div>
 
@@ -35,7 +38,7 @@ export default function PostListLayout({
         <div className="flex">
           <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded pt-5 sm:flex">
             <div className="px-6 py-4">
-              {pathname.startsWith('/blog') ? (
+              {pathname.startsWith("/blog") ? (
                 <h3 className="font-bold text-indigo-500">All Posts</h3>
               ) : (
                 <Link
@@ -49,7 +52,7 @@ export default function PostListLayout({
                 {sortedTags.map((tag) => {
                   return (
                     <li key={tag.label} className="my-3">
-                      {pathname.split('/tags/')[1] === tag.link ? (
+                      {pathname.split("/tags/")[1] === tag.link ? (
                         <h3 className="inline px-3 py-2 text-sm font-bold text-indigo-500">
                           {`${tag.label} (${tag.count})`}
                         </h3>
@@ -70,7 +73,7 @@ export default function PostListLayout({
           </div>
 
           {/* 記事一覧 */}
-          <div className='mt-6'>
+          <div className="mt-6">
             <ul>
               {posts.map((post, index) => (
                 <li key={index}>
@@ -78,6 +81,14 @@ export default function PostListLayout({
                 </li>
               ))}
             </ul>
+
+            {/* ページネーション */}
+            {pagination && pagination.totalPages > 1 && (
+              <Pagination
+                currentPage={pagination.currentPage}
+                totalPages={pagination.totalPages}
+              />
+            )}
           </div>
         </div>
       </div>

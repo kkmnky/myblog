@@ -1,12 +1,16 @@
-import siteMetadata from "@/siteMetadata";
-import { allPosts } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
-import PostCard from "@/features/posts/components/PostCard";
+import siteMetadata from "@/siteMetadata"
+import { allPosts } from "contentlayer/generated"
+import { compareDesc } from "date-fns"
+import PostCard from "@/features/posts/components/PostCard"
+import Link from "next/link"
+
+const MAX_DISPLAY = 15
 
 export default function Home() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
-  );
+  )
+  const displayPosts = posts.slice(0, MAX_DISPLAY)
 
   return (
     <div className="mx-auto max-w-xl">
@@ -25,9 +29,20 @@ export default function Home() {
           {siteMetadata.shortDescription}
         </p>
       </div>
-      {posts.map((post, index) => (
+      {displayPosts.map((post, index) => (
         <PostCard key={index} post={post} />
       ))}
+      {posts.length > MAX_DISPLAY && (
+        <div className="flex justify-end text-base font-medium leading-6">
+          <Link
+            href="/blog"
+            className="text-blue-500 hover:text-blue-800 dark:hover:text-blue-200"
+            aria-label="All posts"
+          >
+            All Posts &rarr;
+          </Link>
+        </div>
+      )}
     </div>
-  );
+  )
 }
