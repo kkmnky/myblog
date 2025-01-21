@@ -37,7 +37,7 @@ tags:
 
 ### ページネーションをつける
 
-[ブログを作成した記事](20240301_blog-start)で書いた通り、本ブログは[tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog/tree/main)を参考にしています。
+[ブログを作成した記事](../2024/20240301_blog-start)で書いた通り、本ブログは[tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog/tree/main)を参考にしています。
 デザインとしても問題ないため、こちらのページネーションをそのまま導入させていただきました。やったこととしては、
 
 - 前へや次へのリンクデザインは[Layout.tsx](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/layouts/ListLayout.tsx)のPaginationを使用する
