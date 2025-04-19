@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import "zenn-content-css"
 import { Toc } from "@/components/ui-parts/Toc"
 import Tag from "@/features/tags/components/Tag"
-import { slug } from "github-slugger"
+import { slug as slugger } from "github-slugger"
 import { genPageMetadata } from "@/components/functional/seo"
 
 export const generateStaticParams = async () =>
@@ -13,12 +13,13 @@ export const generateStaticParams = async () =>
     slug: post.slug.split("/"),
   }))
 
-export const generateMetadata = ({
+export const generateMetadata = async ({
   params,
 }: {
-  params: { slug: string[] }
+  params: Promise<{ slug: string[] }>
 }) => {
-  const targetSlug = params.slug.join("/")
+  const {slug} = await params
+  const targetSlug = slug.join("/")
   const post = allPosts.find((post) => post.slug === targetSlug)
   if (!post) return notFound()
 
@@ -29,8 +30,9 @@ export const generateMetadata = ({
   })
 }
 
-const PostLayout = ({ params }: { params: { slug: string[] } }) => {
-  const targetSlug = params.slug.join("/")
+const PostLayout = async ({ params }: { params: Promise<{ slug: string[] }> }) => {
+  const {slug} = await params
+  const targetSlug = slug.join("/")
   const post = allPosts.find((post) => post.slug === targetSlug)
   if (!post) return notFound()
 
@@ -48,7 +50,7 @@ const PostLayout = ({ params }: { params: { slug: string[] } }) => {
                 <Tag
                   key={tag.label}
                   label={tag.label}
-                  link={tag.link || slug(tag.label)}
+                  link={tag.link || slugger(tag.label)}
                 />
               ))}
             </div>

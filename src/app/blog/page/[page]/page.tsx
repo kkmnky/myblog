@@ -11,11 +11,11 @@ export const metadata = genPageMetadata({
   description: `${siteMetadata.siteName}の投稿記事一覧です。職務に限らず学習した技術・本などを備忘録として不定期に投稿します。`,
 })
 
-export default function Page({ params }: { params: { page: number } }) {
+export default async function Page({ params }: { params: Promise<{ page: number }> }) {
   const sortedPosts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   )
-  const pageNumber = params.page
+  const {page: pageNumber} = await params
   const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE)
 
   // Return 404 for invalid page numbers or empty pages

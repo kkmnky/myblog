@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CountedTag } from '@/features/tags/types';
 import { genPageMetadata } from '@/components/functional/seo';
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = () => {
   return genPageMetadata({
     title: `Tags`,
     description: `投稿記事のタグ一覧になります。投稿数順にソートされています。`,
