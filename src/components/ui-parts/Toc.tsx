@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import tocbot from "tocbot";
 
-export const Toc: React.VFC = () => {
+export const Toc: React.FC = () => {
   useEffect(() => {
     tocbot.init({
       tocSelector: ".toc",
