@@ -26,7 +26,7 @@ export default function Home() {
         <h1 className="mb-8 text-center text-3xl font-black">
           {siteMetadata.siteName}
         </h1>
-        <p className="text-sm leading-7 text-gray-500 dark:text-gray-400">
+        <p className="text-sm leading-7 text-gray-500 dark:text-gray-400" aria-label="site-description">
           {siteMetadata.shortDescription}
         </p>
       </div>

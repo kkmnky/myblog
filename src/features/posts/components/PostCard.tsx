@@ -28,14 +28,14 @@ export default function PostCard({post}: PostCardProps) {
               <Tag key={tag.label} label={tag.label} link={tag.link || slug(tag.label)} />
             ))}
           </div>
-          <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
+          <h3 className="title-font text-xl font-medium text-gray-900 mb-3">
             <Link
               href={post.url}
               className="text-gray-700 hover:text-blue-500 dark:text-gray-400"
             >
               {title}
             </Link>
-          </h1>
+          </h3>
           <p className="leading-relaxed mb-5 text-gray-500">{summary}</p>
         </div>
       </div>
