@@ -11,31 +11,31 @@ export default function Pagination({
   currentPage,
 }: PaginationProps) {
   const pathname = usePathname()
-  const segments = pathname.split("/")
-  const lastSegment = segments[segments.length - 1]
   const basePath = pathname
     .replace(/^\//, "") // Remove leading slash
     .replace(/\/page\/\d+$/, "") // Remove any trailing /page
-  const prevPage = currentPage - 1 > 0
-  const nextPage = currentPage + 1 <= totalPages
+  const prevPage = Number(currentPage) - 1
+  const nextPage = Number(currentPage) + 1
+  const hasPrevPage = prevPage > 0
+  const hasNextPage = nextPage <= totalPages
 
   return (
     <div className="space-y-2 pb-8 pt-6 md:space-y-5">
       <nav className="flex justify-between">
-        {!prevPage && (
+        {!hasPrevPage && (
           <button
             className="cursor-auto disabled:opacity-50"
-            disabled={!prevPage}
+            disabled={!hasPrevPage}
           >
             Previous
           </button>
         )}
-        {prevPage && (
+        {hasPrevPage && (
           <Link
             href={
-              currentPage - 1 === 1
+              prevPage === 1
                 ? `/${basePath}/`
-                : `/${basePath}/page/${currentPage - 1}`
+                : `/${basePath}/page/${prevPage}`
             }
             rel="prev"
           >
@@ -45,16 +45,16 @@ export default function Pagination({
         <span>
           {currentPage} of {totalPages}
         </span>
-        {!nextPage && (
+        {!hasNextPage && (
           <button
             className="cursor-auto disabled:opacity-50"
-            disabled={!nextPage}
+            disabled={!hasNextPage}
           >
             Next
           </button>
         )}
-        {nextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+        {hasNextPage && (
+          <Link href={`/${basePath}/page/${nextPage}`} rel="next">
             Next
           </Link>
         )}
