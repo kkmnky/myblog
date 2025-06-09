@@ -61,7 +61,7 @@ importers:
         version: 3.4.2
       zenn-content-css:
         specifier: ^0.1.151
-        version: 0.1.159
+        version: 0.1.161
     devDependencies:
       '@playwright/test':
         specifier: ^1.52.0
@@ -3956,8 +3956,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zenn-content-css@0.1.159:
-    resolution: {integrity: sha512-uzcqnX1nh+A/taBS5kf9QLPLEfPOuZwrit8gpS0zX7x/EJK6rQieIMoFu7n3STH/09s2kCp25M9E1CT0YXqlOg==}
+  zenn-content-css@0.1.161:
+    resolution: {integrity: sha512-VNaKytAlrOTVjDN+dbrhZXxO2mNqi2UJefS9b686EpCLz8IarONeqNXG5213xYDZwHGRhylj2GQOsheRVROZUA==}
 
   zod-to-json-schema@3.24.5:
     resolution: {integrity: sha512-/AuWwMP+YqiPbsJx5D6TfgRTc4kTLjsh5SOcd4bLsfUg2RcEXrFMJl1DGgdHy2aCfsIA/cr/1JM0xcB2GZji8g==}
@@ -9099,7 +9099,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zenn-content-css@0.1.159: {}
+  zenn-content-css@0.1.161: {}
 
   zod-to-json-schema@3.24.5(zod@3.24.3):
     dependencies:
