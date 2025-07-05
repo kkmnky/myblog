@@ -17,5 +17,7 @@ github: https://github.com/kmnky
 
 ### その他
 
-- CloudNative Days の運営メンバ
 - [Qiita](https://qiita.com/kmnky)
+- SRE Kaigiコアスタッフ (2024-)
+- オブザーバビリティカンファレンスコアスタッフ (2024-)
+- CloudNative Days の運営メンバ (2021-2023)
