@@ -6,6 +6,8 @@ tags:
   - label: ブログ作成
     link: myblog
   - label: Next.js
+  - label: 目標
+    link: objective
 ---
 
 ## はじめに
