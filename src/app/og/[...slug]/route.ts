@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+import { NextResponse, type NextRequest } from "next/server"
 import { allPosts } from "contentlayer/generated"
 import siteMetadata from "@/siteMetadata"
 import { generateOgImage } from "@/lib/generateOgImage"
@@ -13,11 +13,16 @@ export const generateStaticParams = () =>
     slug: post.slug.split("/"),
   }))
 
-export async function GET(
-  _request: Request,
-  { params }: { params: { slug?: string[] } },
-) {
-  const slugSegments = params.slug ?? []
+type RouteContext = { params: Promise<{ slug: string | string[] }> }
+
+export async function GET(_request: NextRequest, { params }: RouteContext) {
+  const resolvedParams = await params
+  const slugValue = resolvedParams?.slug
+  const slugSegments = Array.isArray(slugValue)
+    ? slugValue
+    : slugValue
+      ? [slugValue]
+      : []
   const targetSlug = slugSegments.join("/")
   const post = allPosts.find((entry) => entry.slug === targetSlug)
   const title = post?.title ?? siteMetadata.siteName
