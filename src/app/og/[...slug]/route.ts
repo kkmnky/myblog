@@ -32,7 +32,7 @@ export async function GET(_request: NextRequest, { params }: RouteContext) {
     siteName: siteMetadata.siteName,
   })
 
-  return new NextResponse(imageBuffer, {
+  return new NextResponse(new Blob([imageBuffer]), {
     headers: {
       "Content-Type": "image/png",
       "Cache-Control": "public, max-age=86400",
