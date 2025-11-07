@@ -32,7 +32,16 @@ export async function GET(_request: NextRequest, { params }: RouteContext) {
     siteName: siteMetadata.siteName,
   })
 
-  return new NextResponse(new Blob([imageBuffer]), {
+  const baseBuffer = imageBuffer.buffer
+  const arrayBuffer =
+    baseBuffer instanceof ArrayBuffer
+      ? baseBuffer.slice(
+          imageBuffer.byteOffset,
+          imageBuffer.byteOffset + imageBuffer.byteLength,
+        )
+      : Uint8Array.from(imageBuffer).buffer
+
+  return new NextResponse(arrayBuffer, {
     headers: {
       "Content-Type": "image/png",
       "Cache-Control": "public, max-age=86400",
