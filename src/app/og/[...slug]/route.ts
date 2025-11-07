@@ -15,22 +15,38 @@ export const generateStaticParams = () =>
 
 type RouteContext = { params: Promise<{ slug: string | string[] }> }
 
-export async function GET(_request: NextRequest, { params }: RouteContext) {
-  const resolvedParams = await params
+const resolveSlugSegments = async (paramsPromise: RouteContext["params"]) => {
+  const resolvedParams = await paramsPromise
   const slugValue = resolvedParams?.slug
-  const slugSegments = Array.isArray(slugValue)
+  return Array.isArray(slugValue)
     ? slugValue
     : slugValue
       ? [slugValue]
       : []
+}
+
+const generateImageBuffer = async (slugSegments: string[]) => {
   const targetSlug = slugSegments.join("/")
   const post = allPosts.find((entry) => entry.slug === targetSlug)
   const title = post?.title ?? siteMetadata.siteName
 
-  const imageBuffer = await generateOgImage({
+  return generateOgImage({
     title,
     siteName: siteMetadata.siteName,
   })
+}
+
+const createResponseHeaders = (contentLength?: number) => ({
+  "Content-Type": "image/png",
+  "Cache-Control": "public, max-age=86400",
+  ...(typeof contentLength === "number"
+    ? { "Content-Length": contentLength.toString() }
+    : {}),
+})
+
+export async function GET(_request: NextRequest, { params }: RouteContext) {
+  const slugSegments = await resolveSlugSegments(params)
+  const imageBuffer = await generateImageBuffer(slugSegments)
 
   const baseBuffer = imageBuffer.buffer
   const arrayBuffer =
@@ -42,9 +58,15 @@ export async function GET(_request: NextRequest, { params }: RouteContext) {
       : Uint8Array.from(imageBuffer).buffer
 
   return new NextResponse(arrayBuffer, {
-    headers: {
-      "Content-Type": "image/png",
-      "Cache-Control": "public, max-age=86400",
-    },
+    headers: createResponseHeaders(imageBuffer.length),
+  })
+}
+
+export async function HEAD(_request: NextRequest, { params }: RouteContext) {
+  const slugSegments = await resolveSlugSegments(params)
+  const imageBuffer = await generateImageBuffer(slugSegments)
+
+  return new NextResponse(null, {
+    headers: createResponseHeaders(imageBuffer.length),
   })
 }
