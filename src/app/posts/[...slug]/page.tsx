@@ -26,6 +26,7 @@ export const generateMetadata = async ({
   return genPageMetadata({
     title: post.title,
     description: post.summary,
+    image: `/og/${post.slug}`,
     isArticle: true,
   })
 }
