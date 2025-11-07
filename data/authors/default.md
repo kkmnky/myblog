@@ -1,5 +1,5 @@
 ---
-name: kmnky
+name: kmnky（かみけん）
 avatar: /static/logo.jpg
 occupation: Site Reliability Engineer
 twitter: https://twitter.com/kamiken333
