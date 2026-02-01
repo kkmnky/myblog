@@ -17,7 +17,7 @@ export default function Home() {
     <div className="mx-auto max-w-xl">
       <div className="text-center space-y-2 pb-8 pt-6 md:space-y-5">
         <img
-          src="/static/logo.jpg"
+          src="/static/logo.png"
           alt="logo"
           width={64}
           height={64}

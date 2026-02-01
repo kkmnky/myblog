@@ -1,6 +1,6 @@
 ---
 name: kmnky（かみけん）
-avatar: /static/logo.jpg
+avatar: /static/logo.png
 occupation: Site Reliability Engineer
 twitter: https://twitter.com/kamiken333
 github: https://github.com/kmnky

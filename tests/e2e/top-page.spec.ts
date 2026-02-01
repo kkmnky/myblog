@@ -9,7 +9,7 @@ test.describe('トップページのテスト', () => {
   test('ロゴ画像が正しく表示されている', async ({ page }) => {
     const logo = page.getByRole('main').getByRole('img', { name: 'logo' });
     await expect(logo).toBeVisible();
-    await expect(logo).toHaveAttribute('src', '/static/logo.jpg');
+    await expect(logo).toHaveAttribute('src', '/static/logo.png');
   });
 
   test('サイト名が正しく表示されている', async ({ page }) => {

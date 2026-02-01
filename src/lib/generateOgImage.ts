@@ -38,7 +38,7 @@ const LOGO_PATH = path.join(
   process.cwd(),
   "public",
   "static",
-  "logo.jpg",
+  "logo.png",
 )
 
 let fontRegistered = false

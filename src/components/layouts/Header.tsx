@@ -11,7 +11,7 @@ export default function Header() {
         <Link href="/" aria-label={siteMetadata.siteName}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <img src="/static/logo.jpg" alt="logo" width={48} height={48} />
+              <img src="/static/logo.png" alt="logo" width={48} height={48} />
             </div>
             {typeof siteMetadata.siteName === "string" ? (
               <div className="text-2xl font-semibold sm:block ml-2">
