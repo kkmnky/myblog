@@ -8,6 +8,7 @@ import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import remarkDirectiveRehype from "remark-directive-rehype";
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeLinkPreview from "./src/lib/rehypeLinkPreview";
 import { slug } from 'github-slugger'
 import { writeFileSync } from "fs";
 import { Post as PostType } from "contentlayer/generated";
@@ -94,6 +95,8 @@ export default makeSource({
       remarkDirectiveRehype, // 追加
     ],
     rehypePlugins: [
+      //@ts-expect-error
+      rehypeLinkPreview,
       rehypeSlug,
       //@ts-expect-error
       [rehypePrettyCode, { theme: "catppuccin-macchiato" }],

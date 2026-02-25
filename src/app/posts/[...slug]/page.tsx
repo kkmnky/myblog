@@ -57,7 +57,7 @@ const PostLayout = async ({ params }: { params: Promise<{ slug: string[] }> }) =
             </div>
           </div>
           <div
-            className="markdown lg:px-8 znc"
+            className="markdown lg:px-2 znc"
             dangerouslySetInnerHTML={{ __html: post.body.html }}
           />
         </div>

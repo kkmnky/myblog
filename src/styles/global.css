@@ -62,3 +62,112 @@ input:-webkit-autofill:focus {
 .note-error {
   @apply no-underline;
 }
+
+.znc .link-preview-card {
+  @apply my-6 overflow-hidden rounded-xl border border-gray-200 bg-white;
+}
+
+.znc .link-preview-anchor {
+  @apply grid no-underline text-inherit;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  grid-template-areas: "content image";
+  align-items: stretch;
+  width: 100%;
+  margin: 0 !important;
+  display: grid !important;
+  overflow: hidden;
+}
+
+.znc .link-preview-image {
+  @apply bg-gray-100;
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.znc .link-preview-image img {
+  @apply w-full;
+  display: block !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.znc .link-preview-content {
+  @apply min-w-0 space-y-1 p-3;
+  grid-area: content;
+  overflow: hidden;
+}
+
+.znc .link-preview-content p {
+  margin: 0 !important;
+}
+
+.znc .link-preview-content p + p {
+  margin-top: 0.25rem !important;
+}
+
+.znc .link-preview-title {
+  @apply m-0 text-sm font-semibold text-gray-900;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.znc .link-preview-description {
+  @apply m-0 text-xs text-gray-600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.znc .link-preview-host {
+  @apply m-0 text-xs text-gray-500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dark .znc .link-preview-card {
+  @apply border-gray-700 bg-gray-900;
+}
+
+.dark .znc .link-preview-image {
+  @apply bg-gray-800;
+}
+
+.dark .znc .link-preview-title {
+  @apply text-gray-100;
+}
+
+.dark .znc .link-preview-description {
+  @apply text-gray-300;
+}
+
+.dark .znc .link-preview-host {
+  @apply text-gray-400;
+}
+
+@media (min-width: 640px) {
+  .znc .link-preview-anchor {
+    grid-template-columns: minmax(0, 1fr) 180px;
+  }
+
+  .znc .link-preview-content {
+    @apply p-4;
+  }
+
+  .znc .link-preview-title {
+    @apply text-base;
+  }
+
+  .znc .link-preview-description {
+    @apply text-sm;
+  }
+}
