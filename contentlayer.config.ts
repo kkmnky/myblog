@@ -91,15 +91,12 @@ export default makeSource({
   markdown: {
     remarkPlugins: [
       remarkDirective, // 追加
-      //@ts-expect-error
-      remarkDirectiveRehype, // 追加
+      remarkDirectiveRehype as any, // Contentlayer 側の型と不一致のためキャスト
     ],
     rehypePlugins: [
-      //@ts-expect-error
       rehypeLinkPreview,
       rehypeSlug,
-      //@ts-expect-error
-      [rehypePrettyCode, { theme: "catppuccin-macchiato" }],
+      [rehypePrettyCode as any, { theme: "catppuccin-macchiato" }],
     ],
   },
   onSuccess: async (importData) => {
