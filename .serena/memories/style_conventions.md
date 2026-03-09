@@ -1,0 +1,1 @@
+TypeScript/React中心。パスエイリアス `@/` を利用。App Router配下のページは関数コンポーネントで実装し、コンテンツは `contentlayer/generated` を直接読むパターンが多い。メタデータは `src/components/functional/seo.tsx` の `genPageMetadata` と `src/siteMetadata.js` を共通利用。機能別コードは `src/features/*`、レイアウトや共通UIは `src/components/*` に置く。生成物をソースツリーに書く実装（`src/tagList.json`）が既にあるため、ビルド時生成のパターンが採用されている。
