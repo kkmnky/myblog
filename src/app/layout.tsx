@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
     types: {
-      "application/rss+xml": `${siteMetadata.siteUrl}/feed.xml`,
+      "application/rss+xml": `${siteMetadata.siteUrl}/rss.xml`,
     },
   },
   robots: {

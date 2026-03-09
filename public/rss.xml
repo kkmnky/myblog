@@ -5,9 +5,17 @@
   <link>https://kmnky.dev</link>
   <description>しがないSREのブログです。アプリ・インフラ問わず興味があって学習したことや読んだ本の内容を備忘録として不定期に記事にします。</description>
   <language>ja</language>
-  <lastBuildDate>Mon, 09 Mar 2026 23:33:13 GMT</lastBuildDate>
-  <atom:link href="https://kmnky.dev/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Mon, 09 Mar 2026 23:49:44 GMT</lastBuildDate>
+  <atom:link href="https://kmnky.dev/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+  <title>ブログの改良</title>
+  <link>https://kmnky.dev/posts/2026/20260310_blog-kaizen</link>
+  <guid>https://kmnky.dev/posts/2026/20260310_blog-kaizen</guid>
+  <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
+  <description>RSSの実装をしたので最近のブログの改良をまとめてみました</description>
+  <category>ブログ作成</category><category>Next.js</category>
+</item>
+<item>
   <title>JWT認証の備忘録</title>
   <link>https://kmnky.dev/posts/2026/20260228_rust-study</link>
   <guid>https://kmnky.dev/posts/2026/20260228_rust-study</guid>
