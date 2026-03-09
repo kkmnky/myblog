@@ -26,13 +26,12 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     type: "website",
   },
-  // TODO: RSSを有効化したときに有効化する
-  // alternates: {
-  //   canonical: "./",
-  //   types: {
-  //     "application/rss+xml": `${siteMetadata.siteUrl}/feed.xml`,
-  //   },
-  // },
+  alternates: {
+    canonical: "./",
+    types: {
+      "application/rss+xml": `${siteMetadata.siteUrl}/feed.xml`,
+    },
+  },
   robots: {
     index: true,
     follow: true,

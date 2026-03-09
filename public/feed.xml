@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>kmnky blog</title>
+  <link>https://kmnky.dev</link>
+  <description>しがないSREのブログです。アプリ・インフラ問わず興味があって学習したことや読んだ本の内容を備忘録として不定期に記事にします。</description>
+  <language>ja</language>
+  <lastBuildDate>Mon, 09 Mar 2026 23:33:13 GMT</lastBuildDate>
+  <atom:link href="https://kmnky.dev/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+  <title>JWT認証の備忘録</title>
+  <link>https://kmnky.dev/posts/2026/20260228_rust-study</link>
+  <guid>https://kmnky.dev/posts/2026/20260228_rust-study</guid>
+  <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
+  <description>JWTについてよく忘れるので勉強したついでに備忘メモを残しておく。</description>
+  <category>Rust</category><category>セキュリティ</category>
+</item>
+<item>
+  <title>RustでTodoアプリを実装</title>
+  <link>https://kmnky.dev/posts/2026/20260224_rust-study</link>
+  <guid>https://kmnky.dev/posts/2026/20260224_rust-study</guid>
+  <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+  <description>Rust学習のためにTodoアプリを実装した話</description>
+  <category>Rust</category>
+</item>
+<item>
+  <title>SRE Kaigi 2026 にコアスタッフとして参加しました</title>
+  <link>https://kmnky.dev/posts/2026/20260201_srekaigi</link>
+  <guid>https://kmnky.dev/posts/2026/20260201_srekaigi</guid>
+  <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+  <description>SRE Kaigi 2026 にコアスタッフとして参加したので、やったことや感じたことをまとめました。</description>
+  <category>イベント参加</category><category>SRE</category>
+</item>
+<item>
+  <title>2025年の振り返りと来年の目標</title>
+  <link>https://kmnky.dev/posts/2025/20251231_looking-back</link>
+  <guid>https://kmnky.dev/posts/2025/20251231_looking-back</guid>
+  <pubDate>Wed, 31 Dec 2025 00:00:00 GMT</pubDate>
+  <description>2025年の勉学の目標に対する振り返りと来年に向けて</description>
+  <category>目標</category>
+</item>
+<item>
+  <title>カンファレンスでの公式サイト作成の知見をまとめてみる</title>
+  <link>https://kmnky.dev/posts/2025/20251212_conf-knowledge</link>
+  <guid>https://kmnky.dev/posts/2025/20251212_conf-knowledge</guid>
+  <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+  <description>SRE Kaigiを通して公式サイトの作成に関する動き・知見をまとめてみました</description>
+  <category>イベント参加</category>
+</item>
+<item>
+  <title>ITエンジニアの転職学の読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20251211_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2025/20251211_reading-diary</guid>
+  <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+  <description>ITエンジニアの転職学を読んだ後のまとめ・感想</description>
+  <category>読書日記</category>
+</item>
+<item>
+  <title>Observability Conference Tokyo 2025 のアーカイブ動画を見ました</title>
+  <link>https://kmnky.dev/posts/2025/20251130_o11ycon</link>
+  <guid>https://kmnky.dev/posts/2025/20251130_o11ycon</guid>
+  <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
+  <description>Observability Conference Tokyo 2025 で公開されたアーカイブ動画を見て学んだことメモ</description>
+  <category>イベント参加</category><category>Observability</category>
+</item>
+<item>
+  <title>SREの知識地図の読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20251126_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2025/20251126_reading-diary</guid>
+  <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
+  <description>SREの知識地図に関する読書会を開き、読んだ本と読書会の感想をまとめた読書日記</description>
+  <category>読書日記</category><category>SRE</category>
+</item>
+<item>
+  <title>Observability Conference Tokyo 2025 にコアスタッフとして参加しました</title>
+  <link>https://kmnky.dev/posts/2025/20251107_o11ycon</link>
+  <guid>https://kmnky.dev/posts/2025/20251107_o11ycon</guid>
+  <pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate>
+  <description>Observability Conference Tokyo 2025 にコアスタッフとして参加したので、やったことや感じたことをまとめました。</description>
+  <category>イベント参加</category><category>Observability</category>
+</item>
+<item>
+  <title>RustによるWebアプリケーション開発の読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20250830_rust-studying</link>
+  <guid>https://kmnky.dev/posts/2025/20250830_rust-studying</guid>
+  <pubDate>Sat, 30 Aug 2025 00:00:00 GMT</pubDate>
+  <description>Rust学習のために読んだ「RustによるWebアプリケーション開発 設計からリリース・運用まで」の読書日記</description>
+  <category>読書日記</category><category>Rust</category>
+</item>
+<item>
+  <title>RustでOpenTelemetryを計装</title>
+  <link>https://kmnky.dev/posts/2025/20250712_rust-otel</link>
+  <guid>https://kmnky.dev/posts/2025/20250712_rust-otel</guid>
+  <pubDate>Sat, 12 Jul 2025 00:00:00 GMT</pubDate>
+  <description>今年の目標で掲げた通り、Rustのアプリケーションに対してOpenTelemetryを計装する学習をしました。その学習内容をまとめた記事です。</description>
+  <category>Rust</category><category>Observability</category>
+</item>
+<item>
+  <title>2025年中期振り返り</title>
+  <link>https://kmnky.dev/posts/2025/20250705_looking-back</link>
+  <guid>https://kmnky.dev/posts/2025/20250705_looking-back</guid>
+  <pubDate>Sat, 05 Jul 2025 00:00:00 GMT</pubDate>
+  <description>2025年も半分が過ぎたため、年初に掲げた目標を振り返り、達成に向けたアクションを検討する。</description>
+  <category>目標</category>
+</item>
+<item>
+  <title>7日間でハッキングをはじめる本の読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20250621_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2025/20250621_reading-diary</guid>
+  <pubDate>Sat, 21 Jun 2025 00:00:00 GMT</pubDate>
+  <description>7日間でハッキングをはじめる本 TryHackMeを使って身体で覚える攻撃手法と脆弱性を読んだ後のまとめ・感想</description>
+  <category>読書日記</category><category>セキュリティ</category>
+</item>
+<item>
+  <title>PlaywrightによるE2Eテストの実装</title>
+  <link>https://kmnky.dev/posts/2025/20250518_e2e-test</link>
+  <guid>https://kmnky.dev/posts/2025/20250518_e2e-test</guid>
+  <pubDate>Sun, 18 May 2025 00:00:00 GMT</pubDate>
+  <description>RenovateのPRに対して問題ないか毎回確認するのが面倒なためE2Eテストを実装し、正常確認を自動化した。</description>
+  <category>ブログ作成</category><category>フロントエンド</category>
+</item>
+<item>
+  <title>パッケージのバージョンアップ対応</title>
+  <link>https://kmnky.dev/posts/2025/20250419_pkg-up</link>
+  <guid>https://kmnky.dev/posts/2025/20250419_pkg-up</guid>
+  <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
+  <description>ブログのパッケージのバージョンアップを実施し、renovateを設定した作業メモ。</description>
+  <category>ブログ作成</category><category>Next.js</category>
+</item>
+<item>
+  <title>ビル・キャンベルの成功の教えの読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20250331_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2025/20250331_reading-diary</guid>
+  <pubDate>Mon, 31 Mar 2025 00:00:00 GMT</pubDate>
+  <description>1兆ドルコーチ シリコンバレーのレジェンド ビル・キャンベルの成功の教えを読んだ後のまとめ・感想</description>
+  <category>読書日記</category><category>マネジメント</category>
+</item>
+<item>
+  <title>Webアプリ開発で学ぶ Rust言語入門の読書日記</title>
+  <link>https://kmnky.dev/posts/2025/20250209_rust-studying</link>
+  <guid>https://kmnky.dev/posts/2025/20250209_rust-studying</guid>
+  <pubDate>Sun, 09 Feb 2025 00:00:00 GMT</pubDate>
+  <description>Rustを学習するため「Webアプリ開発で学ぶ Rust言語入門」を読み、Todoアプリを作成した、その読書日記</description>
+  <category>読書日記</category><category>Rust</category>
+</item>
+<item>
+  <title>SRE Kaigi 2025に参加してきた</title>
+  <link>https://kmnky.dev/posts/2025/20250131_sre-kaigi</link>
+  <guid>https://kmnky.dev/posts/2025/20250131_sre-kaigi</guid>
+  <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+  <description>SRE Kaigi 2025に参加してきた時のメモ</description>
+  <category>イベント参加</category>
+</item>
+<item>
+  <title>2025年の目標とブログの改善</title>
+  <link>https://kmnky.dev/posts/2025/20250118_blog-kaizen</link>
+  <guid>https://kmnky.dev/posts/2025/20250118_blog-kaizen</guid>
+  <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
+  <description>2025年の初投稿。2025年にブログに書きたいことと年を跨いただのでブログにページネーションをつける。</description>
+  <category>ブログ作成</category><category>Next.js</category><category>目標</category>
+</item>
+<item>
+  <title>Google Skill Boost（SRE編）</title>
+  <link>https://kmnky.dev/posts/2024/20241231_gcp-learning</link>
+  <guid>https://kmnky.dev/posts/2024/20241231_gcp-learning</guid>
+  <pubDate>Tue, 31 Dec 2024 00:00:00 GMT</pubDate>
+  <description>Google Skill BoostでDevOps Engineer, SRE Learning PathというLearning Pathの概要や感想、学習記録</description>
+  <category>GoogleCloud</category><category>SRE</category>
+</item>
+<item>
+  <title>Google Skill Boost（基礎編）</title>
+  <link>https://kmnky.dev/posts/2024/20241107_gcp-learning</link>
+  <guid>https://kmnky.dev/posts/2024/20241107_gcp-learning</guid>
+  <pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate>
+  <description>Google Skill BoostでGoogle Cloud Infrastructure for AWS professionalsというLearning Pathの概要や感想、学習記録</description>
+  <category>GoogleCloud</category>
+</item>
+<item>
+  <title>Unlearn(アンラーン)の読書日記</title>
+  <link>https://kmnky.dev/posts/2024/20240816_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240816_reading-diary</guid>
+  <pubDate>Fri, 16 Aug 2024 00:00:00 GMT</pubDate>
+  <description>Unlearn(アンラーン) 人生100年時代の新しい「学び」 を読んだ後のまとめ・感想</description>
+  <category>読書日記</category><category>自己啓発</category>
+</item>
+<item>
+  <title>Web制作者のためのCSS設計の教科書の読書日記</title>
+  <link>https://kmnky.dev/posts/2024/20240815_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240815_reading-diary</guid>
+  <pubDate>Thu, 15 Aug 2024 00:00:00 GMT</pubDate>
+  <description>Web制作者のためのCSS設計の教科書をざっと読んだ時の感想メモ。</description>
+  <category>読書日記</category><category>CSS</category>
+</item>
+<item>
+  <title>Next.jsのMetadataをまとめてみる</title>
+  <link>https://kmnky.dev/posts/2024/20240811_seo</link>
+  <guid>https://kmnky.dev/posts/2024/20240811_seo</guid>
+  <pubDate>Sun, 11 Aug 2024 00:00:00 GMT</pubDate>
+  <description>SEO対策の理解を深めるため、Next.jsのMetadataが提供しているフィールドを調べてみる。</description>
+  <category>SEO</category><category>Next.js</category>
+</item>
+<item>
+  <title>SREについて改めて学習する</title>
+  <link>https://kmnky.dev/posts/2024/20240727_sre</link>
+  <guid>https://kmnky.dev/posts/2024/20240727_sre</guid>
+  <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
+  <description>SRE組織をどうすべきか、本来何をやるべきか、改めて自分の中で整理したく、読んだ/これから読みたい資料を集めたメモ。</description>
+  <category>SRE</category>
+</item>
+<item>
+  <title>ブログにタグをつける</title>
+  <link>https://kmnky.dev/posts/2024/20240722_blog-tags</link>
+  <guid>https://kmnky.dev/posts/2024/20240722_blog-tags</guid>
+  <pubDate>Mon, 22 Jul 2024 00:00:00 GMT</pubDate>
+  <description>Contentlayerの機能を使って記事にタグをつけ、タグを集計し、タグ一覧や詳細ページを実装した。本記事はその時の実装内容をまとめたもの。</description>
+  <category>ブログ作成</category><category>Contentlayer</category>
+</item>
+<item>
+  <title>ざっくりつかむCSS設計</title>
+  <link>https://kmnky.dev/posts/2024/20240707_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240707_reading-diary</guid>
+  <pubDate>Sun, 07 Jul 2024 00:00:00 GMT</pubDate>
+  <description>ざっくりつかむCSS設計に関する読書日記</description>
+  <category>読書日記</category><category>フロントエンド</category><category>CSS</category>
+</item>
+<item>
+  <title>動かして学ぶ Flutter開発入門</title>
+  <link>https://kmnky.dev/posts/2024/20240519_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240519_reading-diary</guid>
+  <pubDate>Sun, 19 May 2024 00:00:00 GMT</pubDate>
+  <description>動かして学ぶFlutter開発入門に関する読書日記</description>
+  <category>読書日記</category><category>Flutter</category>
+</item>
+<item>
+  <title>ブログ作成をしながらSEO対策を学習する</title>
+  <link>https://kmnky.dev/posts/2024/20240506_seo</link>
+  <guid>https://kmnky.dev/posts/2024/20240506_seo</guid>
+  <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
+  <description>ブログ構築の参考サイトでSEOというワードが出てきたのでSEOについて知識を整理し、ブログサイトのSEO対策を実践してみる。</description>
+  <category>ブログ作成</category><category>SEO</category><category>Next.js</category>
+</item>
+<item>
+  <title>AWS 春のObservability祭りに参加してきた</title>
+  <link>https://kmnky.dev/posts/2024/20240425_aws-o11y-event</link>
+  <guid>https://kmnky.dev/posts/2024/20240425_aws-o11y-event</guid>
+  <pubDate>Thu, 25 Apr 2024 00:00:00 GMT</pubDate>
+  <description>AWSのイベントに参加してきた時のメモ</description>
+  <category>イベント参加</category>
+</item>
+<item>
+  <title>世界一流エンジニアの思考法</title>
+  <link>https://kmnky.dev/posts/2024/20240407_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240407_reading-diary</guid>
+  <pubDate>Sun, 07 Apr 2024 00:00:00 GMT</pubDate>
+  <description>世界一流エンジニアの思考法の読書日記</description>
+  <category>読書日記</category><category>自己啓発</category>
+</item>
+<item>
+  <title>「技術書」の読書術</title>
+  <link>https://kmnky.dev/posts/2024/20240320_reading-diary</link>
+  <guid>https://kmnky.dev/posts/2024/20240320_reading-diary</guid>
+  <pubDate>Wed, 20 Mar 2024 00:00:00 GMT</pubDate>
+  <description>「技術書」の読書術に関する読書日記</description>
+  <category>読書日記</category><category>自己啓発</category>
+</item>
+<item>
+  <title>ブログをデプロイする</title>
+  <link>https://kmnky.dev/posts/2024/20240303_blog-deploy</link>
+  <guid>https://kmnky.dev/posts/2024/20240303_blog-deploy</guid>
+  <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
+  <description>ローカルで開発したブログをCloudflareへデプロイする</description>
+  <category>ブログ作成</category><category>Next.js</category><category>Cloudflare</category>
+</item>
+<item>
+  <title>初めてのブログの構築</title>
+  <link>https://kmnky.dev/posts/2024/20240301_blog-start</link>
+  <guid>https://kmnky.dev/posts/2024/20240301_blog-start</guid>
+  <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
+  <description>Next.js + Tailwind CSS + Contentlayer で自分だけのMarkdownブログを作る</description>
+  <category>ブログ作成</category><category>Next.js</category><category>Tailwind CSS</category><category>Contentlayer</category>
+</item>
+</channel>
+</rss>
