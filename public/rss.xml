@@ -5,23 +5,15 @@
   <link>https://kmnky.dev</link>
   <description>しがないSREのブログです。アプリ・インフラ問わず興味があって学習したことや読んだ本の内容を備忘録として不定期に記事にします。</description>
   <language>ja</language>
-  <lastBuildDate>Mon, 09 Mar 2026 23:49:44 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 26 Sep 2026 17:28:36 GMT</lastBuildDate>
   <atom:link href="https://kmnky.dev/rss.xml" rel="self" type="application/rss+xml" />
   <item>
-  <title>ブログの改良</title>
-  <link>https://kmnky.dev/posts/2026/20260310_blog-kaizen</link>
-  <guid>https://kmnky.dev/posts/2026/20260310_blog-kaizen</guid>
-  <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
-  <description>RSSの実装をしたので最近のブログの改良をまとめてみました</description>
-  <category>ブログ作成</category><category>Next.js</category>
-</item>
-<item>
-  <title>JWT認証の備忘録</title>
-  <link>https://kmnky.dev/posts/2026/20260228_rust-study</link>
-  <guid>https://kmnky.dev/posts/2026/20260228_rust-study</guid>
-  <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
-  <description>JWTについてよく忘れるので勉強したついでに備忘メモを残しておく。</description>
-  <category>Rust</category><category>セキュリティ</category>
+  <title>PEK2026 に参加しました</title>
+  <link>https://kmnky.dev/posts/2026/20260927_pek2026</link>
+  <guid>https://kmnky.dev/posts/2026/20260927_pek2026</guid>
+  <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+  <description>Platform Engineering Kaigi 2026（PEK2026）に参加したので、聴講したセッションやブースで学んだこと・感じたことをまとめました。</description>
+  <category>イベント参加</category><category>SRE</category><category>Platform Engineering</category>
 </item>
 <item>
   <title>RustでTodoアプリを実装</title>
